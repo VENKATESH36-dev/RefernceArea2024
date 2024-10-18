@@ -9,7 +9,6 @@ public class MedianOfArrays {
 		int arr2[] = {10, 12, 14, 16, 18, 20};
 		
 		System.out.println(medianOfArrays(arr1, arr2));
-
 	}
 	
 	public static double medianOfArrays(int[] arr1, int[] arr2) {
