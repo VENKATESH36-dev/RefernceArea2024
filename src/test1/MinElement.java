@@ -20,6 +20,7 @@ public class MinElement {
 		while(left<right) {
 			int mid=left+(right-left)/2;
 			if(arr[mid]>arr[right]) {
+				System.out.println();
 				left=mid+1;
 			}else {
 				right=mid;

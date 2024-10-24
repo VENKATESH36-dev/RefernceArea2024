@@ -1,6 +1,5 @@
 package test1;
 
-import java.util.Arrays;
 
 public class SubStringOfLongestWord {
 

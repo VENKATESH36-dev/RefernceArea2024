@@ -17,11 +17,11 @@ public class MedianOfArrays {
 		int a1 = arr1.length;
 		int a2 = arr2.length;
 		int a3 = a1+a2;
-		int[] arr3 = new int[arr1.length+arr2.length];
+		int[] arr3 = new int[a3];
 		System.arraycopy(arr1, 0, arr3, 0, a1);
 		System.arraycopy(arr2, 0, arr3, a1, a2);
 		Arrays.sort(arr3);
-		for(int i=0;i<arr3.length;i++) {
+		for(int i=0;i<a3;i++) {
 			if(a3%2==0) {
 				 median = (double)(arr3[((a3-1)/2)]+arr3[((a3+1)/2)])/2;
 			}else if(a3%2 == 1) {

@@ -1,7 +1,7 @@
 package test1;
 
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class StringEncryption {
 
@@ -35,13 +35,11 @@ public class StringEncryption {
 			map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0)+1);
 		}
 		
-		Iterator<Character> iterator = map.keySet().iterator();
-		Character ch = null;
-		while (iterator.hasNext()) {
-			ch = iterator.next();
-			sb1.append(ch).append(map.get(ch));
+		for(Entry<Character, Integer> entry:map.entrySet()) {
+			sb1.append(entry.getKey()).append(entry.getValue());
 		}
-		System.out.println(sb1);
+		
+		System.err.println(sb1);
 		
 		return sb.toString();
 	}
