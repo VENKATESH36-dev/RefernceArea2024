@@ -20,8 +20,9 @@ public class StringPolindromCheck {
 		// Expand from the middle outwards
 		while (left >= 0 && right < s.length()) {
 			if (s.charAt(left) != s.charAt(right)) {
-				return false; // Not a palindrome
+				return true; // Not a palindrome
 			}
+
 			left--;
 			right++;
 		}
