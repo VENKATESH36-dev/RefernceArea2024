@@ -13,21 +13,13 @@ public class LongestPolindromSubString {
 		System.out.println("Longest Palindrome: \"" + result[0] + "\", Length: " + result[1]);
 	}
 
-	/**
-	 * Method to find the longest palindromic substring in a given string.
-	 *
-	 * @param str the input string
-	 * @return a String array containing the longest palindromic substring and its
-	 *         length
-	 */
 	public static String[] longestPalindrome(String str) {
-		// Handle edge case: if the string is null or empty, return empty result
 		if (str == null || str.isEmpty()) {
 			return new String[] { " ", "0" };
 		}
 
-		int maxLength = 0; // Track the length of the longest palindromic substring
-		int start = 0; // Track the starting index of the longest palindromic substring
+		int maxLength = 0; // Track the length 
+		int start = 0; // Track the starting index
 
 		// Loop through each character in the string as a potential center of a palindrome
 		for (int i = 0; i < str.length(); i++) {
@@ -50,19 +42,10 @@ public class LongestPolindromSubString {
 		// Extract the longest palindromic substring from the original string using the start index and maxLength
 		String longestPalindrome = str.substring(start, start + maxLength);
 
-		// Return the longest palindrome and its length as a String array
 		return new String[] { longestPalindrome, String.valueOf(maxLength) };
 	}
 
-	/**
-	 * Helper method to expand around the center and calculate the length of the
-	 * palindrome.
-	 *
-	 * @param str   the input string
-	 * @param left  the left index to start expanding from
-	 * @param right the right index to start expanding from
-	 * @return the length of the palindrome found by expanding around the center
-	 */
+	
 	private static int expandAroundCenter(String str, int left, int right) {
 		// Expand as long as left and right characters are equal and within the bounds of the string
 		while (left >= 0 && right < str.length() && str.charAt(left) == str.charAt(right)) {
