@@ -29,7 +29,9 @@ public class StringEncryption {
 
 		sb.append(str.charAt(str.length() - 1)).append(count);
 		
+		//2nd Approach
 		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		
 		StringBuilder sb1 = new StringBuilder();
 		for(int i=0;i<str.length();i++) {
 			map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0)+1);
