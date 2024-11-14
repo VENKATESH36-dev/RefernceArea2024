@@ -12,17 +12,17 @@ public class MinElement {
 	public static int minimumElementFromSortedArray(int arr[]) {
 
 		int left = 0;
-		int right = arr.length-1;
-		if(arr[left] < arr[right]) {
+		int right = arr.length - 1;
+		if (arr[left] < arr[right]) {
 			return arr[left];
 		}
 
-		while(left<right) {
-			int mid=left+(right-left)/2;
-			if(arr[mid]>arr[right]) {
-				left=mid+1;
-			}else {
-				right=mid;
+		while (left < right) {
+			int mid = left + (right - left) / 2;
+			if (arr[mid] > arr[right]) {
+				left = mid + 1;
+			} else {
+				right = mid;
 			}
 		}
 
