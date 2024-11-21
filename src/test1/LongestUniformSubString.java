@@ -4,8 +4,8 @@ public class LongestUniformSubString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		String str ="aabbbbcccddd";
+
+		String str = "aabbbbcccddd";
 		findLongestUniformSubString(str);
 	}
 
@@ -32,14 +32,14 @@ public class LongestUniformSubString {
 				currentStart = i;
 				currentLength = 1;
 			}
+		}
+		if (currentLength > maxLength) {
+			maxLength = currentLength;
+			maxStart = currentStart;
 
 		}
-		if(currentLength>maxLength) {
-			maxLength = currentLength;
-			maxStart  = currentStart;
-			
-			String longestString =str.substring(maxStart, maxStart+maxLength);
-			System.out.println("StartIndex:: "+maxStart+",  SubString:: \""+longestString+"\"");
-		}
+		String longestString = str.substring(maxStart, maxStart + maxLength);
+		System.out.println("StartIndex:: " + maxStart + ",  SubString:: \"" + longestString + "\"");
+
 	}
 }

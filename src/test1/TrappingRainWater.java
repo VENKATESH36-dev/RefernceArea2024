@@ -42,7 +42,7 @@ public class TrappingRainWater {
         int[] height1 = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int[] height2 = {3, 0, 2, 0, 4};
 
-        System.out.println("Input: [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1] -> Trapped Water: " + trap(height1));
-        System.out.println("Input: [3, 0, 2, 0, 4] -> Trapped Water: " + trap(height2));
+        System.out.println("Trapped Water: " + trap(height1));
+        System.out.println("Trapped Water: " + trap(height2));
     }
 }
