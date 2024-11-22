@@ -2,19 +2,15 @@ package test1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class PascalsTriangle {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Please Enter the NumOfRows:: ");
-		int numRows = scanner.nextInt();
+		int numRows = 5;
 
 		List<List<Integer>> list = preRows(numRows);
 		System.out.println(list);
-		scanner.close();
 	}
 
 	public static List<List<Integer>> preRows(int numRows) {
@@ -24,7 +20,7 @@ public class PascalsTriangle {
 		for (int i = 1; i < numRows; i++) {
 			result = solution(result);
 			List<Integer> rowList = new ArrayList<Integer>();
-			for(int num :result) {
+			for (int num : result) {
 				rowList.add(num);
 			}
 			list.add(rowList);
