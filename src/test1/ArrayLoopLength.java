@@ -10,6 +10,7 @@ public class ArrayLoopLength {
 	}
 
 	public static int findLoopLength(int[] arr) {
+		//Floyd’s Tortoise and Hare Algorithm
 		int n = arr.length;
 		for (int i = 0; i < n; i++) {
 			int slow = i, fast = i;
