@@ -40,6 +40,8 @@ public class StudentAverage {
 				highestAverage = average;
 				topStudent = name;
 			}
+			
+			
 		}
 
 		return new Result(topStudent, highestAverage);
